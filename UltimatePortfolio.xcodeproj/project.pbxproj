@@ -11,6 +11,8 @@
 		17645EBD29C4F18100D4C874 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EBC29C4F18100D4C874 /* ContentView.swift */; };
 		17645EBF29C4F18100D4C874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17645EBE29C4F18100D4C874 /* Assets.xcassets */; };
 		17645EC329C4F18100D4C874 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17645EC229C4F18100D4C874 /* Preview Assets.xcassets */; };
+		17645ECB29C4F44900D4C874 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17645EC929C4F44900D4C874 /* Main.xcdatamodeld */; };
+		17645ECD29C4F6B400D4C874 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645ECC29C4F6B400D4C874 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		17645EBE29C4F18100D4C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17645EC029C4F18100D4C874 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
 		17645EC229C4F18100D4C874 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17645ECA29C4F44900D4C874 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		17645ECC29C4F6B400D4C874 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		17645ECE29C4FCD700D4C874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +58,12 @@
 			isa = PBXGroup;
 			children = (
 				17645EBA29C4F18100D4C874 /* UltimatePortfolioApp.swift */,
+				17645ECC29C4F6B400D4C874 /* DataController.swift */,
 				17645EBC29C4F18100D4C874 /* ContentView.swift */,
+				17645EC929C4F44900D4C874 /* Main.xcdatamodeld */,
 				17645EBE29C4F18100D4C874 /* Assets.xcassets */,
 				17645EC029C4F18100D4C874 /* UltimatePortfolio.entitlements */,
+				17645ECE29C4FCD700D4C874 /* Info.plist */,
 				17645EC129C4F18100D4C874 /* Preview Content */,
 			);
 			path = UltimatePortfolio;
@@ -139,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17645ECB29C4F44900D4C874 /* Main.xcdatamodeld in Sources */,
+				17645ECD29C4F6B400D4C874 /* DataController.swift in Sources */,
 				17645EBD29C4F18100D4C874 /* ContentView.swift in Sources */,
 				17645EBB29C4F18100D4C874 /* UltimatePortfolioApp.swift in Sources */,
 			);
@@ -269,6 +279,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +318,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17645EC929C4F44900D4C874 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17645ECA29C4F44900D4C874 /* Main.xcdatamodel */,
+			);
+			currentVersion = 17645ECA29C4F44900D4C874 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 17645EAF29C4F18100D4C874 /* Project object */;
 }
