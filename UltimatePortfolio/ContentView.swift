@@ -18,6 +18,7 @@ struct ContentView: View {
             .onDelete(perform: delete)
         }
         .navigationTitle("Issues")
+        .searchable(text: $dataController.filterText, prompt: "Filter issues")
     }
 
     private func delete(_ offsets: IndexSet) {
