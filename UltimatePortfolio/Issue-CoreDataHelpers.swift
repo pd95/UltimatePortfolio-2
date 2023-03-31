@@ -32,15 +32,11 @@ extension Issue {
     }
 
     var issueTagsList: String {
-        guard let tags else {
+        guard let tags, tags.count > 0 else {
             return "No tags"
         }
 
-        if tags.count == 0 {
-            return "No tags"
-        } else {
-            return issueTags.map(\.tagName).formatted()
-        }
+        return issueTags.map(\.tagName).formatted()
     }
 
     var issueStatus: String {
