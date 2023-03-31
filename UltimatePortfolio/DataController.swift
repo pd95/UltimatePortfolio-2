@@ -117,4 +117,18 @@ class DataController: ObservableObject {
 
         return difference.sorted()
     }
+
+    func issuesForSelectedFilter() -> [Issue] {
+        let filter = selectedFilter ?? .all
+        var allIssues: [Issue]
+
+        if let tag = filter.tag {
+            allIssues = tag.issues?.allObjects as? [Issue] ?? []
+        } else {
+            let request = Issue.fetchRequest()
+            request.predicate = NSPredicate(format: "modificationDate > %@", filter.minModificationDate as NSDate)
+            allIssues = (try? container.viewContext.fetch(request)) ?? []
+        }
+        return allIssues.sorted()
+    }
 }
