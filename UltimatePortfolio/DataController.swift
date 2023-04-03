@@ -195,4 +195,19 @@ class DataController: ObservableObject {
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         return allIssues
     }
+
+    func newIssue() {
+        let issue = Issue(context: container.viewContext)
+        issue.title = "New issue"
+        issue.creationDate = .now
+        issue.priority = 1
+
+        if let tag = selectedFilter?.tag {
+            issue.addToTags(tag)
+        }
+
+        save()
+
+        selectedIssue = issue
+    }
 }
