@@ -75,6 +75,7 @@ struct IssueView: View {
         .onReceive(issue.objectWillChange) { _ in
             dataController.queueSave()
         }
+        .onSubmit(dataController.save)
         .toolbar {
             Menu {
                 Button {
