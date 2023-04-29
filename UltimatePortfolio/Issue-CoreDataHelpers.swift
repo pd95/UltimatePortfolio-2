@@ -41,10 +41,14 @@ extension Issue {
 
     var issueStatus: String {
         if completed {
-            return "Closed"
+            return NSLocalizedString("Closed", comment: "Issue status")
         } else {
-            return "Open"
+            return NSLocalizedString("Open", comment: "Issue status")
         }
+    }
+
+    var issueFormattedCreationDate: String {
+        issueCreationDate.formatted(date: .numeric, time: .omitted)
     }
 
     static var example: Issue {
