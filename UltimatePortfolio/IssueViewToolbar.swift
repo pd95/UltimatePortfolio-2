@@ -26,6 +26,11 @@ struct IssueViewToolbar: View {
                 Label(issue.completed ? "Re-open Issue" : "Close Issue", systemImage: "bubble.left.and.exclamationmark.bubble.right")
             }
 
+            Divider()
+
+            Section("Tags") {
+                TagsMenuView(issue: issue)
+            }
         } label: {
             Label("Actions", systemImage: "ellipsis.circle")
         }
