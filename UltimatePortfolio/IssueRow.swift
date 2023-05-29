@@ -50,6 +50,6 @@ struct IssueRow: View {
 struct IssueRow_Previews: PreviewProvider {
     static var previews: some View {
         IssueRow(issue: .example)
-            //.environmentObject(DataController.preview)
+            // .environmentObject(DataController.preview)
     }
 }

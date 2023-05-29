@@ -33,7 +33,7 @@ extension Tag {
 }
 
 extension Tag: Comparable {
-    public static func < (lhs: Tag, rhs: Tag) -> Bool {
+    public static func <(lhs: Tag, rhs: Tag) -> Bool {
         let left = lhs.tagName.localizedLowercase
         let right = rhs.tagName.localizedLowercase
 

@@ -63,10 +63,19 @@ class DataController: ObservableObject {
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
-        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-        NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
+        container.persistentStoreDescriptions.first?.setOption(
+            true as NSNumber,
+            forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey
+        )
 
-        container.loadPersistentStores { storeDescription, error in
+        NotificationCenter.default.addObserver(
+            forName: .NSPersistentStoreRemoteChange,
+            object: container.persistentStoreCoordinator,
+            queue: .main,
+            using: remoteStoreChanged
+        )
+
+        container.loadPersistentStores { _, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
@@ -80,14 +89,14 @@ class DataController: ObservableObject {
     func createSampleData() {
         let viewContext = container.viewContext
 
-        for i in 1...5 {
+        for tagCounter in 1...5 {
             let tag = Tag(context: viewContext)
             tag.id = UUID()
-            tag.name = "Tag \(i)"
+            tag.name = "Tag \(tagCounter)"
 
-            for j in 1...10 {
+            for issueCounter in 1...10 {
                 let issue = Issue(context: viewContext)
-                issue.title = "Issue \(i)-\(j)"
+                issue.title = "Issue \(tagCounter)-\(issueCounter)"
                 issue.content = "Description goes here"
                 issue.creationDate = .now
                 issue.completed = Bool.random()
@@ -192,7 +201,7 @@ class DataController: ObservableObject {
         }
 
         let request = Issue.fetchRequest()
-        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates);
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: !sortNewestFirst)]
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         return allIssues
@@ -247,7 +256,7 @@ class DataController: ObservableObject {
 
         default:
             // an unknown award criterion; this should never be allowed
-            //fatalError("Unknown award criterion: \(award.criterion)")
+            // fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
     }
