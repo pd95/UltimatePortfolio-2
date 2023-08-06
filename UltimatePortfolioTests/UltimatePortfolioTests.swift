@@ -18,4 +18,3 @@ class BaseTestCase: XCTestCase {
         managedObjectContext = dataController.container.viewContext
     }
 }
-
