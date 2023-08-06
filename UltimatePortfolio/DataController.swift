@@ -56,13 +56,23 @@ class DataController: ObservableObject {
         return (try? container.viewContext.fetch(request).sorted()) ?? []
     }
 
+    static private var model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file.")
+        }
+        guard let model = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file.")
+        }
+        return model
+    }()
+
     /// Initializes a data controller, either in memory (for testing use such as previewing),
     /// or on a permanent storage (for use in regular app runs).
     ///
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary memory or not
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
