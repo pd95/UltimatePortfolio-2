@@ -25,7 +25,7 @@ final class AwardTests: BaseTestCase {
     }
 
     func test_hasEarned_unlocksAwardsWhenCreatingIssues() {
-        let values = [1, 10, 20, 50, 100, 200, 500, 1000]
+        let values = [1, 10, 20, 50, 100, 250, 500, 1000]
 
         for (count, value) in values.enumerated() {
             var issues = [Issue]()
@@ -45,7 +45,7 @@ final class AwardTests: BaseTestCase {
     }
 
     func test_hasEarned_unlocksAwardsWhenClosingIssues() {
-        let values = [1, 10, 20, 50, 100, 200, 500, 1000]
+        let values = [1, 10, 20, 50, 100, 250, 500, 1000]
 
         for (count, value) in values.enumerated() {
             var issues = [Issue]()
