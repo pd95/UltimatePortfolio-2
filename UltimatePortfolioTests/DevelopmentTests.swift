@@ -25,6 +25,16 @@ final class DevelopmentTests: BaseTestCase {
         XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), 0, "deleteAll() should leave 0 sample issues.")
     }
 
+    func test_deleteAll_clearsNewlyInsertedItems() {
+        let newIssue = Issue(context: managedObjectContext)
+        let newTag = Tag(context: managedObjectContext)
+
+        dataController.deleteAll()
+
+        XCTAssertEqual(dataController.count(for: Tag.fetchRequest()), 0, "deleteAll() should leave 0 sample tags.")
+        XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), 0, "deleteAll() should leave 0 sample issues.")
+    }
+
     func test_exampleTag_hasNoIssues() {
         let tag = Tag.example
 

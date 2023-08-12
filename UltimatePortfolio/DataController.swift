@@ -172,6 +172,8 @@ class DataController: ObservableObject {
     }
 
     func deleteAll() {
+        save()
+
         let request1: NSFetchRequest<NSFetchRequestResult> = Tag.fetchRequest()
         delete(request1)
 
