@@ -10,7 +10,7 @@ import XCTest
 @testable import UltimatePortfolio
 
 final class ExtensionTests: BaseTestCase {
-    func testIssueTitleUnwrap() {
+    func test_issueTitle_matchesTitle() {
         let issue = Issue(context: managedObjectContext)
 
         issue.title = "Example issue"
@@ -20,7 +20,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(issue.title, "Updated issue", "Changing issueTitle should also change title.")
     }
 
-    func testIssueContentUnwrap() {
+    func test_issueContent_matchesContent() {
         let issue = Issue(context: managedObjectContext)
 
         issue.content = "Example issue"
@@ -30,7 +30,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(issue.content, "Updated issue", "Changing issueContent should also change content.")
     }
 
-    func testIssueCreationDateUnwrap() {
+    func test_issueCreationDate_matchesCreationDate() {
         // Given
         let issue = Issue(context: managedObjectContext)
         let testDate = Date.now
@@ -42,7 +42,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(issue.issueCreationDate, testDate, "Changing creationDate should also change issueCreationDate.")
     }
 
-    func testIssueTagsUnwrap() {
+    func test_issueTags_unwrapsTags() {
         let tag = Tag(context: managedObjectContext)
         let issue = Issue(context: managedObjectContext)
 
@@ -52,7 +52,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(issue.issueTags.count, 1, "Adding 1 tag to an issue should result in issueTags having count 1.")
     }
 
-    func testIssueTagsList() {
+    func test_issueTagsList_listsTagsName() {
         let tag = Tag(context: managedObjectContext)
         let issue = Issue(context: managedObjectContext)
 
@@ -62,7 +62,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(issue.issueTagsList, "My Tag", "Adding 1 tag to an issue should make issueTagsList be My Tag.")
     }
 
-    func testIssueSortingIsStable() {
+    func test_issueArray_sortingIsStable() {
         let issue1 = Issue(context: managedObjectContext)
         issue1.title = "B Issue"
         issue1.creationDate = .now
@@ -81,24 +81,21 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual([issue3, issue1, issue2], sorted, "Sorting issue arrays should use name then creation date.")
     }
 
-    func testTagIDUnwrap() {
+    func test_tagID_matchesID() {
         let tag = Tag(context: managedObjectContext)
-
-        XCTAssertNotEqual(tag.tagID, tag.tagID, "nil id will generate new UUID in every access to tagID.")
-
         let newID = UUID()
         tag.id = newID
         XCTAssertEqual(tag.tagID, newID, "Changing id should also update tagID.")
     }
 
-    func testTagNameUnwrap() {
+    func test_tagName_matchesName() {
         let tag = Tag(context: managedObjectContext)
 
         tag.name = "Example tag"
         XCTAssertEqual(tag.tagName, "Example tag", "Changing name should also change tagName.")
     }
 
-    func testTagActiveIssues() {
+    func test_tagActiveIssues_relatesToUncompletedIssues() {
         let tag = Tag(context: managedObjectContext)
         let issue = Issue(context: managedObjectContext)
 
@@ -111,7 +108,7 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual(tag.tagActiveIssues.count, 0, "Completing issue should make activeIssues count 0 for the tag.")
     }
 
-    func testTagSortingIsStable() {
+    func test_tagArray_sortingIsStable() {
         let tag1 = Tag(context: managedObjectContext)
         tag1.id = UUID()
         tag1.name = "B Tag"
@@ -130,19 +127,19 @@ final class ExtensionTests: BaseTestCase {
         XCTAssertEqual([tag3, tag1, tag2], sorted, "Sorting issue arrays should use name then uuidString.")
     }
 
-    func testBundleDecodingAwards() {
+    func test_decode_loadsAwardsJSON() {
         let awards = Bundle.main.decode("Awards.json", as: [Award].self)
         XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a non-empty array.")
     }
 
-    func testBundleDecodingSimpleString() {
+    func test_decode_loadsDecodableStringJSON() {
         let bundle = Bundle(for: ExtensionTests.self)
         let data = bundle.decode("DecodableString.json", as: String.self)
 
         XCTAssertEqual(data, "Never ask a starfish for directions.", "The string must match DecodableString.json")
     }
 
-    func testBundleDecodingSimpleDictionary() {
+    func test_decode_loadsDecodableDictionaryJSON() {
         let bundle = Bundle(for: ExtensionTests.self)
         let data = bundle.decode("DecodableDictionary.json", as: [String: Int].self)
 

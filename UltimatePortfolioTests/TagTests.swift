@@ -11,7 +11,7 @@ import XCTest
 
 final class TagTests: BaseTestCase {
 
-    func testCreatingTagsAndIssues() {
+    func test_count_countsTagsAndIssuesCorrectly() {
         let count = 10
         let issueCount = 10 * 10
 
@@ -28,7 +28,7 @@ final class TagTests: BaseTestCase {
         XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), issueCount, "Expected \(issueCount) issues.")
     }
 
-    func testDeletingTagDoesNotDeleteIssues() throws {
+    func test_delete_doesNotDeleteIssues() throws {
         dataController.createSampleData()
 
         let request = Tag.fetchRequest()
