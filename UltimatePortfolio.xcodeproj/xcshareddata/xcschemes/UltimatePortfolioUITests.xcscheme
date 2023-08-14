@@ -5,22 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17645EB629C4F18100D4C874"
-               BuildableName = "UltimatePortfolio.app"
-               BlueprintName = "UltimatePortfolio"
-               ReferencedContainer = "container:UltimatePortfolio.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -29,36 +13,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:UltimatePortfolioTests/UltimatePortfolio.xctestplan"
+            reference = "container:UltimatePortfolioUITests/UltimatePortfolioUITests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17607B4D2A2CA04D008E95AB"
-               BuildableName = "UltimatePortfolioTests22.xctest"
-               BlueprintName = "UltimatePortfolioTests22"
-               ReferencedContainer = "container:UltimatePortfolio.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17F9D6FD2A2CA46E00A751A6"
-               BuildableName = "UltimatePortfolioTests.xctest"
-               BlueprintName = "UltimatePortfolioTests"
-               ReferencedContainer = "container:UltimatePortfolio.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17C2E96F2A8AB23100518667"
@@ -96,8 +57,7 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17645EB629C4F18100D4C874"
@@ -105,7 +65,7 @@
             BlueprintName = "UltimatePortfolio"
             ReferencedContainer = "container:UltimatePortfolio.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
