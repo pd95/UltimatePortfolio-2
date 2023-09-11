@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1721C16F2AAF5BC30026C00A /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */; };
 		17446FB429FD39B200CEF934 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17446FB629FD39B200CEF934 /* Localizable.strings */; };
 		17446FB829FD3B1500CEF934 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 17446FBA29FD3B1500CEF934 /* Awards.json */; };
 		17446FBC29FD3B5300CEF934 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 17446FBE29FD3B5300CEF934 /* Localizable.stringsdict */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		17446FB529FD39B200CEF934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17446FB729FD39B700CEF934 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17446FB929FD3B1500CEF934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				17645F0A29CAE42500D4C874 /* Filter.swift */,
 				17645F0629CAE2FD00D4C874 /* SidebarView.swift */,
+				1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */,
 				17FC9FBA2A233B9C00F1FAC2 /* SidebarViewToolbar.swift */,
 				17FC9FC22A233F4000F1FAC2 /* SmartFilterRow.swift */,
 				17FC9FC42A233F9100F1FAC2 /* UserFilterRow.swift */,
@@ -468,6 +471,7 @@
 				1747B82029CB602200330067 /* Issue-CoreDataHelpers.swift in Sources */,
 				17F35F0129E5BAB4009BF161 /* Bundle-Decodable.swift in Sources */,
 				17645F0929CAE30300D4C874 /* DetailView.swift in Sources */,
+				1721C16F2AAF5BC30026C00A /* SidebarViewModel.swift in Sources */,
 				17645ECD29C4F6B400D4C874 /* DataController.swift in Sources */,
 				17FC9FBF2A233D5F00F1FAC2 /* ContentViewToolbar.swift in Sources */,
 				17645F0729CAE2FD00D4C874 /* SidebarView.swift in Sources */,
