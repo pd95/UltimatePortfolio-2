@@ -9,22 +9,27 @@ import SwiftUI
 
 struct IssueRow: View {
     @EnvironmentObject private var dataController: DataController
-    @ObservedObject var issue: Issue
+    @StateObject var viewModel: ViewModel
+
+    init(issue: Issue) {
+        let viewModel = ViewModel(issue: issue)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
-        NavigationLink(value: issue, label: {
+        NavigationLink(value: viewModel.issue, label: {
             HStack {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
-                    .opacity(issue.priority == 2 ? 1 : 0)
-                    .accessibilityIdentifier(issue.priority == 2 ? "\(issue.issueTitle) High Priority" : "")
+                    .opacity(viewModel.iconOpacity)
+                    .accessibilityIdentifier(viewModel.iconIdentifier)
 
                 VStack(alignment: .leading) {
-                    Text(issue.issueTitle)
+                    Text(viewModel.issueTitle)
                         .font(.headline)
                         .lineLimit(1)
 
-                    Text(issue.issueTagsList)
+                    Text(viewModel.issueTagsList)
                         .foregroundColor(.secondary)
                         .lineLimit(1)
                 }
@@ -32,11 +37,11 @@ struct IssueRow: View {
                 Spacer()
 
                 VStack(alignment: .trailing) {
-                    Text(issue.issueFormattedCreationDate)
-                        .accessibilityLabel(issue.issueCreationDate.formatted(date: .abbreviated, time: .omitted))
+                    Text(viewModel.creationDate)
+                        .accessibilityLabel(viewModel.accessibilityCreationDate)
                         .font(.subheadline)
 
-                    if issue.completed {
+                    if viewModel.issue.completed {
                         Text("CLOSED")
                             .font(.body.smallCaps())
                     }
@@ -44,8 +49,8 @@ struct IssueRow: View {
                 .foregroundColor(.secondary)
             }
         })
-        .accessibilityHint(issue.priority == 2 ? "High priority" : "")
-        .accessibilityIdentifier(issue.issueTitle)
+        .accessibilityHint(viewModel.accessibilityHint)
+        .accessibilityIdentifier(viewModel.issueTitle)
     }
 }
 
