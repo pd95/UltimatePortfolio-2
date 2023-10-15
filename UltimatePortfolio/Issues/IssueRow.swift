@@ -30,7 +30,7 @@ struct IssueRow: View {
                         .lineLimit(1)
 
                     Text(viewModel.issueTagsList)
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
 
@@ -46,7 +46,7 @@ struct IssueRow: View {
                             .font(.body.smallCaps())
                     }
                 }
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
             }
         })
         .accessibilityHint(viewModel.accessibilityHint)

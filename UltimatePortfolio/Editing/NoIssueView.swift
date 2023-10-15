@@ -13,7 +13,7 @@ struct NoIssueView: View {
     var body: some View {
         Text("No Issue Selected")
             .font(.title)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
 
         Button("New Issue", action: dataController.newIssue)
     }

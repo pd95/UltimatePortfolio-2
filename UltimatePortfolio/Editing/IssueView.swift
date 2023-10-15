@@ -38,7 +38,7 @@ struct IssueView: View {
                 VStack(alignment: .leading) {
                     Text("Basic Information")
                         .font(.title2)
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(.secondary)
 
                     TextField(
                         "Description",
