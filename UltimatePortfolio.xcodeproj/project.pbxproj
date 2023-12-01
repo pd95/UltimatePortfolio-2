@@ -37,6 +37,8 @@
 		17C2E9752A8AB23100518667 /* UltimatePortfolioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2E9742A8AB23100518667 /* UltimatePortfolioUITestsLaunchTests.swift */; };
 		17CA6C422ADC5AE30065FAF4 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA6C412ADC5AE30065FAF4 /* ContentViewModel.swift */; };
 		17CA6C442ADC5BE90065FAF4 /* IssueRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA6C432ADC5BE90065FAF4 /* IssueRowViewModel.swift */; };
+		17CE7E342B1A30F600599039 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE7E332B1A30F600599039 /* DataController-StoreKit.swift */; };
+		17CE7E372B1A359400599039 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE7E362B1A359400599039 /* StoreView.swift */; };
 		17F35F0129E5BAB4009BF161 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F35F0029E5BAB4009BF161 /* Bundle-Decodable.swift */; };
 		17F35F0529E5BDD5009BF161 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F35F0329E5BDD5009BF161 /* Colors.xcassets */; };
 		17F35F0729E5BE68009BF161 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F35F0629E5BE68009BF161 /* Award.swift */; };
@@ -108,6 +110,9 @@
 		17C2E9742A8AB23100518667 /* UltimatePortfolioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		17CA6C412ADC5AE30065FAF4 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		17CA6C432ADC5BE90065FAF4 /* IssueRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowViewModel.swift; sourceTree = "<group>"; };
+		17CE7E322B1A2F9500599039 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		17CE7E332B1A30F600599039 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
+		17CE7E362B1A359400599039 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		17F35F0029E5BAB4009BF161 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		17F35F0329E5BDD5009BF161 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		17F35F0629E5BE68009BF161 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 				17645EC929C4F44900D4C874 /* Main.xcdatamodeld */,
 				17645EC029C4F18100D4C874 /* UltimatePortfolio.entitlements */,
 				17645ECE29C4FCD700D4C874 /* Info.plist */,
+				17CE7E322B1A2F9500599039 /* Configuration.storekit */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 		17645EB929C4F18100D4C874 /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				17CE7E352B1A358500599039 /* Store */,
 				17607B452A2C99F1008E95AB /* Filters */,
 				17607B462A2C99F7008E95AB /* Issues */,
 				17607B472A2C99FC008E95AB /* Editing */,
@@ -259,6 +266,7 @@
 				17645EBA29C4F18100D4C874 /* UltimatePortfolioApp.swift */,
 				17645ECC29C4F6B400D4C874 /* DataController.swift */,
 				1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */,
+				17CE7E332B1A30F600599039 /* DataController-StoreKit.swift */,
 				17F35F0329E5BDD5009BF161 /* Colors.xcassets */,
 				17645EBE29C4F18100D4C874 /* Assets.xcassets */,
 				17645EC129C4F18100D4C874 /* Preview Content */,
@@ -291,6 +299,14 @@
 				17C2E9742A8AB23100518667 /* UltimatePortfolioUITestsLaunchTests.swift */,
 			);
 			path = UltimatePortfolioUITests;
+			sourceTree = "<group>";
+		};
+		17CE7E352B1A358500599039 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				17CE7E362B1A359400599039 /* StoreView.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		17F9D6FF2A2CA46E00A751A6 /* UltimatePortfolioTests */ = {
@@ -475,6 +491,7 @@
 				17FC9FBD2A233CBB00F1FAC2 /* IssueViewToolbar.swift in Sources */,
 				17FC9FC32A233F4000F1FAC2 /* SmartFilterRow.swift in Sources */,
 				17F35F0929E5BF13009BF161 /* AwardsView.swift in Sources */,
+				17CE7E342B1A30F600599039 /* DataController-StoreKit.swift in Sources */,
 				1723DFCA2ADF0328006A6A83 /* DataController-Notifications.swift in Sources */,
 				1747B82229CB612800330067 /* Tag-CoreDataHelpers.swift in Sources */,
 				17645ECB29C4F44900D4C874 /* Main.xcdatamodeld in Sources */,
@@ -493,6 +510,7 @@
 				175660C629D38008005D6326 /* NoIssueView.swift in Sources */,
 				1747B82429CB67C500330067 /* IssueRow.swift in Sources */,
 				17645EBB29C4F18100D4C874 /* UltimatePortfolioApp.swift in Sources */,
+				17CE7E372B1A359400599039 /* StoreView.swift in Sources */,
 				17CA6C442ADC5BE90065FAF4 /* IssueRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
