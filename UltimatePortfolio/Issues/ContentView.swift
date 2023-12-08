@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.requestReview) var requestReview
     @StateObject var viewModel: ViewModel
+    @SceneStorage("lastReviewDate") private var lastReviewRequestDate = Date.distantPast
 
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
@@ -37,9 +38,20 @@ struct ContentView: View {
     }
 
     func askForReview() {
-        if viewModel.shouldRequestReview {
+        if viewModel.shouldRequestReview && lastReviewRequestDate.addingTimeInterval(7*60*60*24) < Date.now {
             requestReview()
+            lastReviewRequestDate = Date.now
         }
+    }
+}
+
+extension Date: RawRepresentable {
+    public init(rawValue value: Int) {
+        self.init(timeIntervalSince1970: Double(value))
+    }
+
+    public var rawValue: Int {
+        Int(timeIntervalSince1970)
     }
 }
 
