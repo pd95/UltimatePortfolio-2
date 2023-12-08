@@ -13,6 +13,11 @@
           "description" : "Get access to the full app.",
           "displayName" : "Premium Unlock",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Hozzáférés a teljes alkalmazáshoz",
+          "displayName" : "Prémium feloldás",
+          "locale" : "hu"
         }
       ],
       "productID" : "com.yourcompany.UltimatePortfolio.premiumUnlock",
