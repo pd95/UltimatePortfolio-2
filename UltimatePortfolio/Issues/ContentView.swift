@@ -12,6 +12,8 @@ struct ContentView: View {
     @StateObject var viewModel: ViewModel
     @SceneStorage("lastReviewDate") private var lastReviewRequestDate = Date.distantPast
 
+    private let newIssueActivity = "com.yourcompany.UltimatePortfolio.newIssue"
+
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -36,6 +38,11 @@ struct ContentView: View {
         .toolbar(content: ContentViewToolbar.init)
         .onAppear(perform: askForReview)
         .onOpenURL(perform: openURL)
+        .userActivity(newIssueActivity) { activity in
+            activity.isEligibleForPrediction = true
+            activity.title = "New Issue"
+        }
+        .onContinueUserActivity(newIssueActivity, perform: resumeActivity)
     }
 
     func askForReview() {
@@ -49,6 +56,10 @@ struct ContentView: View {
         if url.absoluteString.contains("newIssue") {
             viewModel.dataController.newIssue()
         }
+    }
+
+    func resumeActivity(_ userActivity: NSUserActivity) {
+        viewModel.dataController.newIssue()
     }
 }
 
