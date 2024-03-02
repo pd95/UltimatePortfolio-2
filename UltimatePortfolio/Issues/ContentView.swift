@@ -35,12 +35,19 @@ struct ContentView: View {
         }
         .toolbar(content: ContentViewToolbar.init)
         .onAppear(perform: askForReview)
+        .onOpenURL(perform: openURL)
     }
 
     func askForReview() {
         if viewModel.shouldRequestReview && lastReviewRequestDate.addingTimeInterval(7*60*60*24) < Date.now {
             requestReview()
             lastReviewRequestDate = Date.now
+        }
+    }
+
+    func openURL(_ url: URL) {
+        if url.absoluteString.contains("newIssue") {
+            viewModel.dataController.newIssue()
         }
     }
 }

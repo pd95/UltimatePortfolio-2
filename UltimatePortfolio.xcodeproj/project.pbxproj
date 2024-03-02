@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1721C16F2AAF5BC30026C00A /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */; };
 		1723DFCA2ADF0328006A6A83 /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */; };
+		172C14462B932D5300C245B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C14452B932D5300C245B0 /* AppDelegate.swift */; };
+		172C14482B932D5A00C245B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C14472B932D5A00C245B0 /* SceneDelegate.swift */; };
 		17446FB429FD39B200CEF934 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17446FB629FD39B200CEF934 /* Localizable.strings */; };
 		17446FB829FD3B1500CEF934 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 17446FBA29FD3B1500CEF934 /* Awards.json */; };
 		17446FBC29FD3B5300CEF934 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 17446FBE29FD3B5300CEF934 /* Localizable.stringsdict */; };
@@ -73,6 +75,8 @@
 /* Begin PBXFileReference section */
 		1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Notifications.swift"; sourceTree = "<group>"; };
+		172C14452B932D5300C245B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		172C14472B932D5A00C245B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		17446FB529FD39B200CEF934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17446FB729FD39B700CEF934 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17446FB929FD3B1500CEF934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				17607B422A2C995B008E95AB /* Configuration */,
 				17645EBA29C4F18100D4C874 /* UltimatePortfolioApp.swift */,
 				17645ECC29C4F6B400D4C874 /* DataController.swift */,
+				172C14452B932D5300C245B0 /* AppDelegate.swift */,
+				172C14472B932D5A00C245B0 /* SceneDelegate.swift */,
 				1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */,
 				17CE7E332B1A30F600599039 /* DataController-StoreKit.swift */,
 				17F35F0329E5BDD5009BF161 /* Colors.xcassets */,
@@ -489,6 +495,7 @@
 				17FC9FC12A233E8900F1FAC2 /* TagsMenuView.swift in Sources */,
 				17F35F0729E5BE68009BF161 /* Award.swift in Sources */,
 				17FC9FBD2A233CBB00F1FAC2 /* IssueViewToolbar.swift in Sources */,
+				172C14462B932D5300C245B0 /* AppDelegate.swift in Sources */,
 				17FC9FC32A233F4000F1FAC2 /* SmartFilterRow.swift in Sources */,
 				17F35F0929E5BF13009BF161 /* AwardsView.swift in Sources */,
 				17CE7E342B1A30F600599039 /* DataController-StoreKit.swift in Sources */,
@@ -496,6 +503,7 @@
 				1747B82229CB612800330067 /* Tag-CoreDataHelpers.swift in Sources */,
 				17645ECB29C4F44900D4C874 /* Main.xcdatamodeld in Sources */,
 				1747B82029CB602200330067 /* Issue-CoreDataHelpers.swift in Sources */,
+				172C14482B932D5A00C245B0 /* SceneDelegate.swift in Sources */,
 				17F35F0129E5BAB4009BF161 /* Bundle-Decodable.swift in Sources */,
 				17645F0929CAE30300D4C874 /* DetailView.swift in Sources */,
 				1721C16F2AAF5BC30026C00A /* SidebarViewModel.swift in Sources */,
