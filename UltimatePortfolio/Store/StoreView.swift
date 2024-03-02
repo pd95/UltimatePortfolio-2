@@ -163,4 +163,5 @@ struct StoreView: View {
 
 #Preview {
     StoreView()
+        .environmentObject(DataController.preview)
 }
