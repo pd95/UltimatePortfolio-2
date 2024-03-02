@@ -54,12 +54,12 @@ struct ContentView: View {
 
     func openURL(_ url: URL) {
         if url.absoluteString.contains("newIssue") {
-            viewModel.dataController.newIssue()
+            viewModel.newIssue()
         }
     }
 
     func resumeActivity(_ userActivity: NSUserActivity) {
-        viewModel.dataController.newIssue()
+        viewModel.newIssue()
     }
 }
 
