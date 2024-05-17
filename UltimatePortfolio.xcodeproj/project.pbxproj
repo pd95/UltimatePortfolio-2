@@ -81,6 +81,10 @@
 		1757153A2BF79EB4001B49F7 /* IssueRowWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175715392BF79EB4001B49F7 /* IssueRowWatch.swift */; };
 		1757153C2BF7A011001B49F7 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757153B2BF7A010001B49F7 /* ToolbarItemPlacement.swift */; };
 		1757153D2BF7A011001B49F7 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757153B2BF7A010001B49F7 /* ToolbarItemPlacement.swift */; };
+		175D6F7E2BF7E2240023BAB2 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */; };
+		175D6F7F2BF7E24B0023BAB2 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */; };
+		175D6F802BF7E24C0023BAB2 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */; };
+		175D6F812BF7E24D0023BAB2 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */; };
 		17643C932BC16A3E008AD288 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17643C922BC16A3E008AD288 /* WidgetKit.framework */; };
 		17643C952BC16A3E008AD288 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17643C942BC16A3E008AD288 /* SwiftUI.framework */; };
 		17643C982BC16A3E008AD288 /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17643C972BC16A3E008AD288 /* PortfolioWidgetBundle.swift */; };
@@ -226,6 +230,7 @@
 		175715392BF79EB4001B49F7 /* IssueRowWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowWatch.swift; sourceTree = "<group>"; };
 		1757153B2BF7A010001B49F7 /* ToolbarItemPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemPlacement.swift; sourceTree = "<group>"; };
 		175D6F7C2BF7D74B0023BAB2 /* UPAWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "UPAWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Testing.swift"; sourceTree = "<group>"; };
 		1761B7032A8AC365006CD297 /* UltimatePortfolioUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UltimatePortfolioUITests.xctestplan; sourceTree = "<group>"; };
 		17643C902BC16A3E008AD288 /* PortfolioWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PortfolioWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		17643C922BC16A3E008AD288 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -495,6 +500,7 @@
 				17645EBA29C4F18100D4C874 /* UltimatePortfolioApp.swift */,
 				17645ECC29C4F6B400D4C874 /* DataController.swift */,
 				17643CAE2BC16C57008AD288 /* DataController-Awards.swift */,
+				175D6F7D2BF7E2240023BAB2 /* DataController-Testing.swift */,
 				172C14452B932D5300C245B0 /* AppDelegate.swift */,
 				172C14472B932D5A00C245B0 /* SceneDelegate.swift */,
 				1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */,
@@ -690,7 +696,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					175714CC2BF784C6001B49F7 = {
 						CreatedOnToolsVersion = 15.4;
@@ -828,6 +834,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175714E72BF78522001B49F7 /* Main.xcdatamodeld in Sources */,
+				175D6F802BF7E24C0023BAB2 /* DataController-Testing.swift in Sources */,
 				175714DF2BF7851D001B49F7 /* Filter.swift in Sources */,
 				175714E02BF7851D001B49F7 /* DataController-StoreKit.swift in Sources */,
 				175714E12BF7851D001B49F7 /* DataController.swift in Sources */,
@@ -880,6 +887,7 @@
 				1757152E2BF79255001B49F7 /* ContentViewToolbar.swift in Sources */,
 				1757152F2BF79255001B49F7 /* Bundle-AppGroup.swift in Sources */,
 				175715302BF79255001B49F7 /* IssueViewToolbar.swift in Sources */,
+				175D6F7F2BF7E24B0023BAB2 /* DataController-Testing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1712241A2BF7604700C719E9 /* ComplexPortfolioWidget.swift in Sources */,
+				175D6F812BF7E24D0023BAB2 /* DataController-Testing.swift in Sources */,
 				17643CAA2BC16B99008AD288 /* Filter.swift in Sources */,
 				17D9FF772BC1798900BE7D43 /* Bundle-AppGroup.swift in Sources */,
 				17643CA72BC16B41008AD288 /* Issue-CoreDataHelpers.swift in Sources */,
@@ -936,6 +945,7 @@
 				1747B82429CB67C500330067 /* IssueRow.swift in Sources */,
 				1757153C2BF7A011001B49F7 /* ToolbarItemPlacement.swift in Sources */,
 				17645EBB29C4F18100D4C874 /* UltimatePortfolioApp.swift in Sources */,
+				175D6F7E2BF7E2240023BAB2 /* DataController-Testing.swift in Sources */,
 				17CE7E372B1A359400599039 /* StoreView.swift in Sources */,
 				17CA6C442ADC5BE90065FAF4 /* IssueRowViewModel.swift in Sources */,
 				17D9FF762BC1792C00BE7D43 /* Bundle-AppGroup.swift in Sources */,
@@ -1102,6 +1112,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UPAWatch Watch App/UPAWatch Watch App.entitlements";
@@ -1138,6 +1149,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UPAWatch Watch App/UPAWatch Watch App.entitlements";
@@ -1185,7 +1197,7 @@
 				INFOPLIST_FILE = PortfolioWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1221,7 +1233,7 @@
 				INFOPLIST_FILE = PortfolioWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1246,6 +1258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1307,6 +1320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1384,7 +1398,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -1427,7 +1441,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -1449,7 +1463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.UltimatePortfolioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1467,7 +1481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.UltimatePortfolioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1488,7 +1502,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8CC95REUG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.UltimatePortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1508,7 +1522,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8CC95REUG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.UltimatePortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -13,7 +13,15 @@ extension ContentView {
         var dataController: DataController
 
         var shouldRequestReview: Bool {
-            dataController.count(for: Tag.fetchRequest()) >= 5
+            if dataController.count(for: Tag.fetchRequest()) >= 5 {
+                let reviewRequestCount = UserDefaults.standard.integer(forKey: "reviewRequestCount")
+                UserDefaults.standard.set(reviewRequestCount + 1, forKey: "reviewRequestCount")
+
+                if reviewRequestCount.isMultiple(of: 10) {
+                    return true
+                }
+            }
+            return false
         }
 
         init(dataController: DataController) {

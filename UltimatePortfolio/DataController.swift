@@ -82,7 +82,6 @@ class DataController: ObservableObject {
         return model
     }()
 
-    // swiftlint:disable function_body_length
     /// Initializes a data controller, either in memory (for testing use such as previewing),
     /// or on a permanent storage (for use in regular app runs).
     ///
@@ -152,17 +151,9 @@ class DataController: ObservableObject {
                 #endif
             }
 
-#if DEBUG
-            if CommandLine.arguments.contains("enable-testing") {
-                self?.deleteAll()
-                #if os(iOS)
-                UIView.setAnimationsEnabled(false)
-                #endif
-            }
-#endif
+            self?.checkForTestEnvironment()
         }
     }
-    // swiftlint:enable function_body_length
 
     func remoteStoreChanged(_ notification: Notification) {
         objectWillChange.send()

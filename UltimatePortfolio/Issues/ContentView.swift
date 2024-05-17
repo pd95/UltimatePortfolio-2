@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     #if !os(watchOS)
-    @Environment(\.requestReview) var requestReview
+    @Environment(\.requestReview) private var requestReview
     #endif
-    @StateObject var viewModel: ViewModel
-    @SceneStorage("lastReviewDate") private var lastReviewRequestDate = Date.distantPast
+    @StateObject private var viewModel: ViewModel
 
     private let newIssueActivity = "com.yourcompany.UltimatePortfolio.newIssue"
 
@@ -58,9 +57,8 @@ struct ContentView: View {
 
     func askForReview() {
         #if !os(watchOS)
-        if viewModel.shouldRequestReview && lastReviewRequestDate.addingTimeInterval(7*60*60*24) < Date.now {
+        if viewModel.shouldRequestReview {
             requestReview()
-            lastReviewRequestDate = Date.now
         }
         #endif
     }

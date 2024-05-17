@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IssueRow: View {
     @EnvironmentObject private var dataController: DataController
-    @StateObject var viewModel: ViewModel
+    @StateObject private var viewModel: ViewModel
 
     init(issue: Issue) {
         let viewModel = ViewModel(issue: issue)
@@ -57,6 +57,6 @@ struct IssueRow: View {
 struct IssueRow_Previews: PreviewProvider {
     static var previews: some View {
         IssueRow(issue: .example)
-            // .environmentObject(DataController.preview)
+            .environmentObject(DataController.preview)
     }
 }

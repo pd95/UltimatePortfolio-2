@@ -22,5 +22,6 @@ struct NoIssueView: View {
 struct NoIssueView_Previews: PreviewProvider {
     static var previews: some View {
         NoIssueView()
+            .environmentObject(DataController.preview)
     }
 }

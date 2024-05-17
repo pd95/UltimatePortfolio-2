@@ -12,7 +12,7 @@ import SwiftUI
 
 @main
 struct UltimatePortfolioApp: App {
-    @Environment(\.scenePhase) var scenePhase
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var dataController = DataController()
 
     #if os(iOS)
@@ -30,8 +30,8 @@ struct UltimatePortfolioApp: App {
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
-            .onChange(of: scenePhase) { phase in
-                if phase != .active {
+            .onChange(of: scenePhase) {
+                if scenePhase != .active {
                     dataController.save()
                 }
             }

@@ -13,12 +13,9 @@ struct StoreView: View {
         case loading, loaded, error
     }
 
-    #if os(visionOS)
-    @Environment(\.purchase) var purchaseAction
-    #endif
-
-    @EnvironmentObject var dataController: DataController
-    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject private var dataController: DataController
+    @Environment(\.purchase) private var purchaseAction
+    @Environment(\.dismiss) private var dismiss
 
     @State private var loadState = LoadState.loading
     @State private var showingPurchaseError = false
@@ -119,9 +116,7 @@ struct StoreView: View {
             Please ask whomever manages your device for assistance.
             """)
         }
-        .onChange(of: dataController.fullVersionUnlocked) { _ in
-            checkForPurchase()
-        }
+        .onChange(of: dataController.fullVersionUnlocked, checkForPurchase)
         .task {
             await load()
         }
@@ -135,14 +130,10 @@ struct StoreView: View {
 
     func purchase(_ product: Product) {
         Task { @MainActor in
-            #if os(visionOS)
             let result = try await purchaseAction(product)
             if case let .success(validation) = result {
                 try await dataController.finalize(validation.payloadValue)
             }
-            #else
-            try await dataController.purchase(product)
-            #endif
         }
     }
 

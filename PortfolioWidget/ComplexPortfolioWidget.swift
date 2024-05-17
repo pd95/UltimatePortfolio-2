@@ -37,8 +37,9 @@ struct ComplexEntry: TimelineEntry {
 }
 
 struct ComplexPortfolioWidgetEntryView: View {
-    @Environment(\.widgetFamily) var widgetFamily
-    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    @Environment(\.widgetFamily) private var widgetFamily
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var entry: ComplexEntry
 
     var issues: ArraySlice<Issue> {

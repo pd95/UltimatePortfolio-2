@@ -11,7 +11,7 @@ struct IssueView: View {
     @EnvironmentObject private var dataController: DataController
     @ObservedObject var issue: Issue
     @State private var showingNotificationsError = false
-    @Environment(\.openURL) var openURL
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
         Form {
@@ -86,12 +86,8 @@ struct IssueView: View {
         } message: {
             Text("There was a problem setting your notifications. Please check you have notifications enabled.")
         }
-        .onChange(of: issue.reminderEnabled) { _ in
-            updateReminder()
-        }
-        .onChange(of: issue.reminderTime) { _ in
-            updateReminder()
-        }
+        .onChange(of: issue.reminderEnabled, updateReminder)
+        .onChange(of: issue.reminderTime, updateReminder)
     }
 
     #if os(iOS)
