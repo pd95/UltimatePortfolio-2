@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AwardsView: View {
     @EnvironmentObject private var dataController: DataController
+    @Environment(\.dismiss) private var dismiss
 
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
@@ -33,13 +34,20 @@ struct AwardsView: View {
                                 .frame(width: 100, height: 100)
                                 .foregroundStyle(color(for: award))
                         }
+                        .buttonStyle(.borderless)
                         .accessibilityLabel(label(for: award))
                         .accessibilityHint(award.description)
                     }
                 }
             }
             .navigationTitle("Awards")
+            .toolbar {
+                Button("Close") {
+                    dismiss()
+                }
+            }
         }
+        .macFrame(minWidth: 600, maxHeight: 500)
         .alert(awardTitle, isPresented: $showingAwardDetails) {
         } message: {
             Text(selectedAward.description)

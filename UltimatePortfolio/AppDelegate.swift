@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
 
     func application(
@@ -19,3 +20,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return sceneConfiguration
     }
 }
+#endif

@@ -26,6 +26,7 @@ struct ContentView: View {
             }
             .onDelete(perform: viewModel.delete)
         }
+        .macFrame(minWidth: 220)
         .navigationTitle("Issues")
         .searchable(
             text: $viewModel.filterText,
@@ -39,7 +40,9 @@ struct ContentView: View {
         .onAppear(perform: askForReview)
         .onOpenURL(perform: viewModel.openURL)
         .userActivity(newIssueActivity) { activity in
+            #if !os(macOS)
             activity.isEligibleForPrediction = true
+            #endif
             activity.title = "New Issue"
         }
         .onContinueUserActivity(newIssueActivity, perform: resumeActivity)

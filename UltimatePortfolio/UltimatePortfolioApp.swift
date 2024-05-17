@@ -12,7 +12,10 @@ import SwiftUI
 struct UltimatePortfolioApp: App {
     @Environment(\.scenePhase) var scenePhase
     @StateObject private var dataController = DataController()
+
+    #if os(iOS)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
 
     var body: some Scene {
         WindowGroup {
