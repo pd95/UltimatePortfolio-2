@@ -7,32 +7,38 @@
 
 import SwiftUI
 
-struct SidebarViewToolbar: View {
+struct SidebarViewToolbar: ToolbarContent {
     @EnvironmentObject private var dataController: DataController
 
     @Binding var showingAwards: Bool
     @State private var showingStore = false
 
-    var body: some View {
-        Button(action: tryNewTag) {
-            Label("Add tag", systemImage: "plus")
+    var body: some ToolbarContent {
+        ToolbarItem(placement: .automaticOrTrailing) {
+            Button(action: tryNewTag) {
+                Label("Add tag", systemImage: "plus")
+            }
+            .sheet(isPresented: $showingStore, content: StoreView.init)
+            .help("Add tag")
         }
-        .sheet(isPresented: $showingStore, content: StoreView.init)
-        .help("Add tag")
 
-        Button {
-            showingAwards.toggle()
-        } label: {
-            Label("Show awards", systemImage: "rosette")
+        ToolbarItem(placement: .automaticOrLeading) {
+            Button {
+                showingAwards.toggle()
+            } label: {
+                Label("Show awards", systemImage: "rosette")
+            }
+            .help("Show awards")
         }
-        .help("Show awards")
 
-        #if DEBUG
-        Button {
-            dataController.deleteAll()
-            dataController.createSampleData()
-        } label: {
-            Label("ADD SAMPLES", systemImage: "flame")
+        #if DEBUG && !os(watchOS)
+        ToolbarItem(placement: .automatic) {
+            Button {
+                dataController.deleteAll()
+                dataController.createSampleData()
+            } label: {
+                Label("ADD SAMPLES", systemImage: "flame")
+            }
         }
         #endif
     }
@@ -41,12 +47,5 @@ struct SidebarViewToolbar: View {
         if dataController.newTag() == false {
             showingStore = true
         }
-    }
-}
-
-struct SidebarViewToolbar_Previews: PreviewProvider {
-    static var previews: some View {
-        SidebarViewToolbar(showingAwards: .constant(true))
-            .environmentObject(DataController.preview)
     }
 }
