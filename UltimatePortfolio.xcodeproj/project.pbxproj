@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171224182BF75F6900C719E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17446FB629FD39B200CEF934 /* Localizable.strings */; };
+		1712241A2BF7604700C719E9 /* ComplexPortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171224192BF7604700C719E9 /* ComplexPortfolioWidget.swift */; };
 		1721C16F2AAF5BC30026C00A /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */; };
 		1723DFCA2ADF0328006A6A83 /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */; };
 		172C14462B932D5300C245B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C14452B932D5300C245B0 /* AppDelegate.swift */; };
@@ -22,7 +24,7 @@
 		17643C932BC16A3E008AD288 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17643C922BC16A3E008AD288 /* WidgetKit.framework */; };
 		17643C952BC16A3E008AD288 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17643C942BC16A3E008AD288 /* SwiftUI.framework */; };
 		17643C982BC16A3E008AD288 /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17643C972BC16A3E008AD288 /* PortfolioWidgetBundle.swift */; };
-		17643C9A2BC16A3E008AD288 /* PortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17643C992BC16A3E008AD288 /* PortfolioWidget.swift */; };
+		17643C9A2BC16A3E008AD288 /* SimplePortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17643C992BC16A3E008AD288 /* SimplePortfolioWidget.swift */; };
 		17643C9C2BC16A3F008AD288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17643C9B2BC16A3F008AD288 /* Assets.xcassets */; };
 		17643CA02BC16A3F008AD288 /* PortfolioWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 17643C902BC16A3E008AD288 /* PortfolioWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		17643CA52BC16B1A008AD288 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17645EC929C4F44900D4C874 /* Main.xcdatamodeld */; };
@@ -109,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		171224192BF7604700C719E9 /* ComplexPortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexPortfolioWidget.swift; sourceTree = "<group>"; };
 		1721C16E2AAF5BC30026C00A /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		1723DFC92ADF0328006A6A83 /* DataController-Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Notifications.swift"; sourceTree = "<group>"; };
 		172C14452B932D5300C245B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +132,7 @@
 		17643C922BC16A3E008AD288 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		17643C942BC16A3E008AD288 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		17643C972BC16A3E008AD288 /* PortfolioWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetBundle.swift; sourceTree = "<group>"; };
-		17643C992BC16A3E008AD288 /* PortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidget.swift; sourceTree = "<group>"; };
+		17643C992BC16A3E008AD288 /* SimplePortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePortfolioWidget.swift; sourceTree = "<group>"; };
 		17643C9B2BC16A3F008AD288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17643C9D2BC16A3F008AD288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17643CAE2BC16C57008AD288 /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
@@ -304,7 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				17643C972BC16A3E008AD288 /* PortfolioWidgetBundle.swift */,
-				17643C992BC16A3E008AD288 /* PortfolioWidget.swift */,
+				17643C992BC16A3E008AD288 /* SimplePortfolioWidget.swift */,
+				171224192BF7604700C719E9 /* ComplexPortfolioWidget.swift */,
 				17643CB02BC16DCD008AD288 /* PortfolioWidgetExtension.entitlements */,
 				17643C9B2BC16A3F008AD288 /* Assets.xcassets */,
 				17643C9D2BC16A3F008AD288 /* Info.plist */,
@@ -542,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17643C9C2BC16A3F008AD288 /* Assets.xcassets in Resources */,
+				171224182BF75F6900C719E9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1712241A2BF7604700C719E9 /* ComplexPortfolioWidget.swift in Sources */,
 				17643CAA2BC16B99008AD288 /* Filter.swift in Sources */,
 				17D9FF772BC1798900BE7D43 /* Bundle-AppGroup.swift in Sources */,
 				17643CA72BC16B41008AD288 /* Issue-CoreDataHelpers.swift in Sources */,
@@ -610,7 +616,7 @@
 				17643CA52BC16B1A008AD288 /* Main.xcdatamodeld in Sources */,
 				17643CAD2BC16BD0008AD288 /* DataController-StoreKit.swift in Sources */,
 				17643CA62BC16B33008AD288 /* DataController.swift in Sources */,
-				17643C9A2BC16A3E008AD288 /* PortfolioWidget.swift in Sources */,
+				17643C9A2BC16A3E008AD288 /* SimplePortfolioWidget.swift in Sources */,
 				17643C982BC16A3E008AD288 /* PortfolioWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

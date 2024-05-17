@@ -1,5 +1,5 @@
 //
-//  PortfolioWidget.swift
+//  SimplePortfolioWidget.swift
 //  PortfolioWidget
 //
 //  Created by Philipp on 06.04.2024.
@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+struct SimpleProvider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date.now, issues: [.example])
     }
@@ -36,7 +36,7 @@ struct SimpleEntry: TimelineEntry {
     let issues: [Issue]
 }
 
-struct PortfolioWidgetEntryView: View {
+struct SimplePortfolioWidgetEntryView: View {
     var entry: SimpleEntry
 
     var body: some View {
@@ -47,33 +47,34 @@ struct PortfolioWidgetEntryView: View {
             if let issue = entry.issues.first {
                 Text(issue.issueTitle)
             } else {
-                Text("Nothing")
+                Text("Nothing!")
             }
         }
     }
 }
 
-struct PortfolioWidget: Widget {
-    let kind: String = "PortfolioWidget"
+struct SimplePortfolioWidget: Widget {
+    let kind: String = "SimplePortfolioWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: SimpleProvider()) { entry in
             if #available(iOS 17.0, *) {
-                PortfolioWidgetEntryView(entry: entry)
+                SimplePortfolioWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
             } else {
-                PortfolioWidgetEntryView(entry: entry)
+                SimplePortfolioWidgetEntryView(entry: entry)
                     .padding()
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Up next…")
+        .description("Your #1 top-priority issue.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
 #Preview(as: .systemSmall) {
-    PortfolioWidget()
+    SimplePortfolioWidget()
 } timeline: {
     SimpleEntry(date: .now, issues: [.example])
     SimpleEntry(date: .now, issues: [.example])
